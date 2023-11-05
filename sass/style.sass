@@ -1,0 +1,159 @@
+@import 'variables'
+
+*
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+body
+    position: relative
+    width: 100%
+    min-height: 100vh
+    font-family: 'Kumbh Sans', sans-serif
+    font-size: 12px
+    color: $very-dark-desaturated-blue
+
+.wrapper
+    position: absolute
+    top: 0px
+    left: 0px
+    width: 100%
+    min-height: 100%
+    background-image: linear-gradient($soft-violet, $soft-blue)
+
+.faq-card
+    position: relative
+    margin: 120px auto 50px auto
+    padding: 135px 20px 40px 20px
+    width: 85%
+    background-color: #fff
+    border-radius: 30px
+    box-shadow: 0px 40px 50px 0px rgba(0, 0, 0, .2)
+
+.graphics-mobile
+    position: absolute
+    left: 50%
+    transform: translateX(-50%)
+
+.faq-ilustration-mobile
+    top: -105px
+    width: 230px
+
+.faq-pattern-mobile
+    top: 0
+
+.graphics-desktop
+    display: none
+
+.faq-card-main-title
+    margin-bottom: 15px
+    font-size: 34px
+    text-align: center
+
+.faq-card-accordion-question
+    position: relative
+    min-height: 50px
+    font-size: 14px
+    line-height: 50px
+    color: $very-dark-grayish-blue
+    outline: none
+    cursor: pointer
+    transition: color .3s
+
+.faq-card-accordion-question:hover
+    color: $soft-red
+
+.arrow-icon
+    position: absolute
+    top: 50%
+    right: 0
+    transform: translateY(-50%)
+    transition: .3s transform
+
+.active
+    font-weight: 700
+
+.active .arrow-icon
+    transform: translateY(-50%) rotate(180deg)
+
+.faq-card-accordion-answer
+    padding-right: 30px
+    max-height: 0
+    color: $dark-grayish-blue
+    overflow: hidden
+    transition: .3s max-height
+
+hr
+    height: 1px
+    background: $light-grayish-blue
+    border: 0
+    transition: .3s margin-top
+
+.active ~ hr
+    margin-top: 10px
+
+footer
+    position: absolute
+    width: 100%
+    bottom: 0px
+    font-size: 11px
+    text-align: center
+
+footer a
+    color: hsl(228, 45%, 44%)
+    
+@media (min-width: 1092px)
+    .wrapper
+        display: flex
+        justify-content: center
+        align-items: center
+
+    .box-anchor-point
+        position: relative
+    
+    .graphics-desktop
+        display: block
+        position: absolute
+
+    .faq-box-desktop
+        position: absolute
+        top: 50%
+        left: -93px
+        transform: translateY(-40px)
+        z-index: 1
+
+    .faq-card
+        display: flex
+        flex-direction: row
+        width: 1000px
+        margin: 50px 0
+        padding: 80px 0px
+        overflow: hidden
+
+    .faq-card-graphics
+        width: 50%
+
+    .faq-card-graphics-desktop
+        position: relative
+        width: 200px
+        height: 200px
+        top: 50%
+        transform: translateY(-50%)
+
+    .faq-ilustration-desktop
+        top: 50%
+        left: -80px
+        transform: translateY(-50%)
+   
+    .faq-pattern-desktop
+        top: -450px
+        left: -570px
+
+    .faq-card-graphics-mobile
+        display: none
+
+    .faq-card-main
+        width: 400px
+
+    .faq-card-main-title
+        text-align-last: left
